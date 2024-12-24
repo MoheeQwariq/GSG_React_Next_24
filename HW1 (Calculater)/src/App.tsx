@@ -1,14 +1,14 @@
 import "./App.css";
-import Keyboard from "./components/keyboard/keyboard";
-import Result from "./components/result/result";
+import Keyboard from "./components/keyboard";
+import Result from "./components/result";
 
 function App() {
-  return( 
+  return (
     <div className="screen">
-      <Result/>
-      <Keyboard/>
+      <Result />
+      <Keyboard />
     </div>
-    )
+  );
 }
 
 export default App;

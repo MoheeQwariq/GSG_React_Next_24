@@ -1,24 +1,19 @@
-import './button.css'
-interface Iprops {
- symbol : string,
- color : string,
- height: string,
- width:string
+import { IButton } from "../type";
+import "./button.css";
+
+const Button = (props: IButton) => {
+  const { symbol, color, special = false } = props;
+  const style = {
+    backgroundColor: color,
+    width: special ? "360px" : "100px",
+    height: special ? "110px" : "100px",
+  };
+
+  return (
+    <div style={style} className="button">
+      {symbol}
+    </div>
+  );
 };
-
-
-const Button = (props : Iprops) => {
-   const style = {
-      backgroundColor: props.color,
-      height:props.height,
-      width:props.width,
-    };
-
-return(
- <div style={style} className='button' >
-    {props.symbol}
- </div>
-)
-}
 
 export default Button;

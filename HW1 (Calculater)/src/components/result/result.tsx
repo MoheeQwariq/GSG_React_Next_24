@@ -1,10 +1,6 @@
-import './result.css'
+import "./result.css";
 
-const Result = ()=>{
-    return (
-        <div className='result'>
-
-        </div>
-    );
-}
+const Result = () => {
+  return <div className="result"></div>;
+};
 export default Result;

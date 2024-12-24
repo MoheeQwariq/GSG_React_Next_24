@@ -1,4 +1,7 @@
-div.screen{
-    width: 400px;
-    height: 600px;
+div.screen {
+  width: 400px;
+  height: 800px;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
 }
