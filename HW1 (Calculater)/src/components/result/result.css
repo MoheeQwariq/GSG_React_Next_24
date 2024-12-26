@@ -1,5 +1,19 @@
-div.result {
-  height: 20%;
+div.onScreen {
+  display: flex;
+  height: 15%;
   background-color: #f4f6fa;
   border-radius: 20px;
+  color: #383f41;
+  font-weight: bold;
+  justify-content: center;
+  align-items: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  overflow: scroll; 
+  white-space: nowrap;
+  flex-wrap: nowrap;
+  font-size:50px
+}
+
+span.result {
+  color: rgb(90, 169, 199);
 }
