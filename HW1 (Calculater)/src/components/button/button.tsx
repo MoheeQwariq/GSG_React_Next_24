@@ -1,4 +1,4 @@
-import { IButton } from "../type";
+import { IButton } from "../../type";
 import "./button.css";
 
 const Button = (props: IButton) => {

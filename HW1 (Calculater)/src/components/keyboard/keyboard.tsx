@@ -1,5 +1,5 @@
+import { IKeyboard } from "../../type";
 import Button from "../button";
-import { IKeyboard } from "../type";
 import "./keyboard.css";
 
 const Keyboard = (props: IKeyboard) => {

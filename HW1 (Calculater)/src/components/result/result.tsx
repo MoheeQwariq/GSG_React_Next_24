@@ -1,4 +1,4 @@
-import { IResult } from "../type";
+import { IResult } from "../../type";
 import "./result.css";
 
 const Result = (props: IResult) => {
