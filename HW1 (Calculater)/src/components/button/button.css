@@ -7,3 +7,7 @@ div.button {
   color: #ffffff;
   font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
+
+div.button:active {
+  transform: scale(0.9); 
+}
