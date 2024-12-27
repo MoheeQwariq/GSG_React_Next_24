@@ -1,10 +1,8 @@
-import { useState } from "react";
 import Button from "../button";
 import { IKeyboard } from "../type";
 import "./keyboard.css";
 
 const Keyboard = (props: IKeyboard) => {
-  const [expression, setExpression] = useState("");
   const { screen, setScreen } = props;
 
   const numbers = ["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"];
@@ -12,35 +10,34 @@ const Keyboard = (props: IKeyboard) => {
 
   const isNumber = (symbol: string) => numbers.includes(symbol);
   const isOperators = (symbol: string) => operators.includes(symbol);
-  const isValidExpression = (exp: string) => /^\d+([+-]\d+)+$/.test(exp);
+  const isValidExpression = (exp: string) => /^-?\d+([+-]\d+)+$/.test(exp);
+
+  console.log(screen);
 
   const handleButtonClick = (symbol: string) => {
     console.log(`Button with symbol "${symbol}" clicked!`);
 
     if (isNumber(symbol)) {
       if (screen.includes("=")) {
-        setExpression("" + symbol);
-        setScreen("" + symbol);
+        setScreen(symbol);
       } else {
-        setExpression(expression + symbol);
-        setScreen(expression + symbol);
+        setScreen(screen + symbol);
       }
-    } else if (isOperators(symbol) && expression.length != 0) {
-      if (isOperators(expression.charAt(expression.length - 1))) {
-        setExpression(expression.slice(0, -1) + symbol);
-        setScreen(expression.slice(0, -1) + symbol);
+    } else if (isOperators(symbol) && screen.length != 0) {
+      if (isOperators(screen.charAt(screen.length - 1))) {
+        setScreen(screen.slice(0, -1) + symbol);
       } else {
-        setExpression(expression + symbol);
-        setScreen(expression + symbol);
+        if (screen.includes("=")) {
+          const res = screen.split("=");
+          setScreen(res[1] + symbol);
+        } else setScreen(screen + symbol);
       }
     } else {
-      if (isValidExpression(expression)) {
-        setExpression(expression);
-        setScreen(expression + " = " + eval(expression));
+      if (isValidExpression(screen)) {
+        setScreen(screen + "=" + eval(screen));
       }
     }
   };
-
   return (
     <div className="keyboard">
       {numbers.map((num) => (

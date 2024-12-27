@@ -10,7 +10,6 @@ div.onScreen {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   overflow: scroll; 
   white-space: nowrap;
-  flex-wrap: nowrap;
   font-size:50px
 }
 
