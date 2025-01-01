@@ -1,0 +1,11 @@
+div.screen {
+    width: 400px;
+    height: 800px;
+    user-select: none;
+    -webkit-user-select: none;
+    cursor: pointer;
+    border: 1px black solid;
+    padding: 20px;
+    padding-top: 40px;
+  }
+  
