@@ -1,0 +1,55 @@
+form.block {
+  height: 150px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  cursor: pointer;
+}
+
+div.todo {
+  height: 30px;
+  display: flex;
+  align-items: center;
+}
+
+div.todo input {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  outline: none;
+  padding-left: 10px;
+  border: #6ace91 3px solid;
+}
+
+div.urgent {
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+div.urgent input[type="checkbox"] {
+  width: 16px;
+  height: 16px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  accent-color: #6ace91;
+}
+
+div.urgent label {
+  cursor: pointer;
+}
+
+input.butt {
+  width: 100%;
+  height: 40px;
+  border: unset;
+  border-radius: 5px;
+  border-color: #6ace91;
+  background-color: #6ace91;
+  font-size: 20px;
+  font-weight: 600;
+  color: #061626;
+  cursor: pointer;
+}
