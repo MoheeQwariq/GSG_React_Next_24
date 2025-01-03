@@ -19,7 +19,7 @@ div.todo input {
   border-radius: 5px;
   outline: none;
   padding-left: 10px;
-  border: #6ace91 3px solid;
+  border: #33c979 2.5px solid;
   background-color: #d5d5d5;
   font-size: 16px;
 }
@@ -36,7 +36,7 @@ div.urgent input[type="checkbox"] {
   height: 16px;
   cursor: pointer;
   transition: all 0.3s ease;
-  accent-color: #6ace91;
+  accent-color: #33c979 ;
 }
 
 div.urgent label {
@@ -48,8 +48,8 @@ input.butt {
   height: 40px;
   border: unset;
   border-radius: 5px;
-  border-color: #6ace91;
-  background-color: #6ace91;
+  border-color: #33c979 ;
+  background-color: #33c979 ;
   font-size: 20px;
   font-weight: 600;
   color: #061626;
