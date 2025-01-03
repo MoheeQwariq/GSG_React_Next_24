@@ -20,6 +20,8 @@ div.todo input {
   outline: none;
   padding-left: 10px;
   border: #6ace91 3px solid;
+  background-color: #d5d5d5;
+  font-size: 16px;
 }
 
 div.urgent {
