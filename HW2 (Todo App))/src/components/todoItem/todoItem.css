@@ -1,0 +1,53 @@
+div.task.urg {
+  border: 2px solid red;
+}
+
+div.task {
+  height: 65px;
+  border-radius: 5px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2), 0 1px 3px rgba(0, 0, 0, 0.1);
+  background-color: rgb(229, 229, 229);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 18px;
+}
+
+input.check {
+  appearance: none;
+  width: 22px;
+  height: 22px;
+  position: relative;
+  left: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  border: 2.5px solid #03101d;
+  border-radius: 50%;
+}
+input.check:checked {
+  background-color: #33c979;
+  border-color: #33c979;
+}
+
+input.check:checked::after {
+  content: "✓";
+  color: white;
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+span.trash {
+  width: 22px;
+  height: 22px;
+  position: relative;
+  right: 20px;
+}
+
+.isDone{
+  text-decoration: line-through;
+  color: #b8babc;
+}

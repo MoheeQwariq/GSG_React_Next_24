@@ -1,0 +1,16 @@
+div.todos {
+    margin-top: 20px;
+    padding: 10px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 25px;
+    overflow: scroll;
+}
+
+div.todos > * {
+    flex: 0 0 auto; 
+    box-sizing: border-box;
+}
+/* +601162088848 */
