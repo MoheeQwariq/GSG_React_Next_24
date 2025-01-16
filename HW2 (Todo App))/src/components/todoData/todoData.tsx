@@ -1,5 +1,5 @@
 import { ITodoDate } from "../../type";
-import "./todoDate.css";
+import "./todoData.css";
 
 const TodoDate = (props: ITodoDate) => {
   const urgentCount = props.items.filter((item) => item.isUrgent).length;

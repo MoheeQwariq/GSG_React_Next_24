@@ -3,7 +3,7 @@ import "./App.css";
 import AllTodos from "./components/allTodos";
 import Date from "./components/date";
 import Form from "./components/form";
-import TodoDate from "./components/todoDate";
+import TodoData from "./components/todoData";
 import { Task } from "./type";
 
 function App() {
@@ -18,14 +18,15 @@ function App() {
     setTodos(newItems);
   };
    const handelOnDelete =(index:number)=>{
-    setTodos([...todos.slice(0,index), ...todos.slice(index +1,todos.length)]);
+    const newTodos = todos.filter((_,i)=> i !== index)
+    setTodos(newTodos);
    }
 
   return (
     <div className="screen">
       <Date />
       <Form onSubmit={handelNewItem} />
-      <TodoDate items={todos} />
+      <TodoData items={todos} />
       <AllTodos items={todos} onToggle={handelTaskToggle} onDelete={handelOnDelete}/>
     </div>
   );

@@ -1,7 +1,3 @@
-div.task.urg {
-  border: 2px solid red;
-}
-
 div.task {
   height: 65px;
   border-radius: 5px;
@@ -14,6 +10,22 @@ div.task {
   font-size: 18px;
 }
 
+div.task.urg {
+  border: 2px solid red;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 20px rgba(255, 0, 0, 0.7);
+  }
+  100% {
+    box-shadow: 0 0 10px rgba(255, 0, 0, 0.5);
+  }
+}
 input.check {
   appearance: none;
   width: 22px;
@@ -47,7 +59,7 @@ span.trash {
   right: 20px;
 }
 
-.isDone{
+.isDone {
   text-decoration: line-through;
   color: #b8babc;
 }

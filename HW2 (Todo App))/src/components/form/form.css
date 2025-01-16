@@ -23,6 +23,12 @@ div.todo input {
   background-color: #d5d5d5;
   font-size: 16px;
 }
+.error {
+  color: red;
+  font-size: 0.9rem;
+  margin-top: 5px;
+}
+
 
 div.urgent {
   font-size: 16px;
